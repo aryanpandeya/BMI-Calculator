@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
 app.post('/', (req,res) => {
     var wt = Number(req.body.weight);
     var ht = Number(req.body.height);
+    ht/=100;
     var bmi = wt/(ht*ht);
     bmi = +bmi.toFixed(2);
 
